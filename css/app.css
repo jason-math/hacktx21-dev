@@ -1,3 +1,4 @@
+@charset "UTF-8";
 html {
   background: #000;
   position: relative;
@@ -10,9 +11,17 @@ body {
   margin: 0; }
 
 /*
+Typography
+*/
+h1, h2, h3, h4, h5, h6,
+p, span, textarea, input, label, button, a {
+  font-family: 'Museo', sans-serif; }
+
+/*
 Header (castle, logo, register button)
 */
 header {
+  position: relative;
   min-height: 100vh; }
 
 .castle-image {
@@ -42,13 +51,62 @@ header {
   background-position: center;
   animation-name: logo-fall;
   animation-duration: 1.5s;
-  animation-timing-function: cubic-bezier(0.4, 0, 0.8, 0); }
+  animation-timing-function: cubic-bezier(0.4, 0, 0.8, 0);
+  /* hidden text for screen readers / coping */
+  color: #0000;
+  cursor: default;
+  text-align: center;
+  font-size: 8em; }
+
+.register-button {
+  animation: fadeInDelayed 3.8s ease-out;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 350px;
+  transform: scale(1);
+  text-align: center;
+  font-size: 3em;
+  text-shadow: 0 0 6px #0007;
+  transition: transform 0.2s ease-out; }
+  .register-button:hover {
+    transform: scale(1.1); }
+  .register-button a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px; }
+    .register-button a::before, .register-button a::after {
+      font-size: 0.7em;
+      padding: 20px;
+      content: "◀";
+      display: inline-block; }
+    .register-button a::after {
+      content: "▶"; }
+
+h3.more-text {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 600px;
+  text-align: center;
+  font-size: 2em;
+  text-shadow: 0 0 6px #0007;
+  color: #fff;
+  animation: fadeInDelayed 4.3s ease-out; }
+  h3.more-text::after {
+    font-size: 0.7em;
+    content: "▼";
+    display: block;
+    position: relative;
+    animation: bounce 2s infinite ease-in-out; }
 
 @media (max-width: 900px) {
   .castle-image {
     padding: 0;
     position: absolute;
-    right: -200px; } }
+    right: -200px; }
+  .hacktx-2021-logo {
+    font-size: 3em; } }
 
 @keyframes logo-fall {
   0% {
@@ -95,3 +153,19 @@ header {
   100% {
     top: 3.6153846153846154px;
     left: 5.846153846153846px; } }
+
+@keyframes fadeInDelayed {
+  0% {
+    opacity: 0; }
+  50% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
+@keyframes bounce {
+  0% {
+    top: 0; }
+  50% {
+    top: 10px; }
+  100% {
+    top: 0; } }
