@@ -1,0 +1,44 @@
+html {
+  background: #000; }
+
+body {
+  overflow-x: hidden;
+  margin: 0; }
+
+/*
+Header (castle, logo, register button)
+*/
+header {
+  min-height: 100vh; }
+
+.castle-image {
+  display: block;
+  width: 1280px;
+  min-width: 80%;
+  background: url("../images/grassbackground.png"), linear-gradient(#80ffff, #ffdf80 60%);
+  background-repeat: no-repeat;
+  /* move the grass background down to reveal the sky */
+  background-position: 0 calc(max(45vw, 720px) * 0.6), 0 0;
+  /* center the image using padding so that the
+      gradient background is maintained across the full width */
+  padding: 0 calc(50vw - (max(80%, 1280px) / 2)); }
+
+.hacktx-2021-logo {
+  margin: 0 auto;
+  width: 90%;
+  /* fixed height implicitly gives the logo background (not actual div content) a max-width
+      the height of the actual image background can be smaller than this as the width gets smaller */
+  height: 250px;
+  position: absolute;
+  top: 100px;
+  left: 0;
+  right: 0;
+  background: url("../images/hacktx-2021-logo.svg");
+  background-repeat: no-repeat;
+  background-position: center; }
+
+@media (max-width: 900px) {
+  .castle-image {
+    padding: 0;
+    position: absolute;
+    right: -200px; } }
