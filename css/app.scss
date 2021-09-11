@@ -1,0 +1,209 @@
+$skygradient-proportion: 0.6;
+$skygradient-blue: rgb(128,255,255);
+$skygradient-yellow: rgb(255,223,128);
+$skygradient: linear-gradient(#{$skygradient-blue}, #{$skygradient-yellow} #{$skygradient-proportion * 100}#{"%"});
+
+html {
+   background: #000;
+   position: relative;
+   animation-name: shake;
+   animation-delay: 1.45s;
+   animation-duration: 0.3s;
+}
+
+body {
+   overflow-x: hidden;
+   margin: 0;
+}
+
+/*
+Typography
+*/
+
+h1,h2,h3,h4,h5,h6,
+p,span,textarea,input,label,button,a {
+   font-family: 'Museo', sans-serif;
+}
+
+/*
+Header (castle, logo, register button)
+*/
+
+header {
+   position: relative;
+   min-height: 100vh;
+}
+
+.castle-image {
+   display: block;
+   width: 1280px;
+   min-width: 80%;
+
+   $actual-height: "max(45vw, 720px)";
+   $actual-width: "max(80%, 1280px)";
+
+   background: url("../images/grassbackground.png"), $skygradient;
+   background-repeat: no-repeat;
+   /* move the grass background down to reveal the sky */
+   background-position: 0 calc(#{$actual-height} * #{$skygradient-proportion}), 0 0;
+
+   /* center the image using padding so that the
+      gradient background is maintained across the full width */
+   padding: 0 calc(50vw - (#{$actual-width} / 2));
+}
+
+.hacktx-2021-logo {
+   margin: 0 auto;
+   width: 90%;
+   /* fixed height implicitly gives the logo background (not actual div content) a max-width
+      the height of the actual image background can be smaller than this as the width gets smaller */
+   height: 250px;
+
+   position: absolute;
+   top: 100px;
+   left: 0;
+   right: 0;
+
+   background: url("../images/hacktx-2021-logo.svg");
+   background-repeat: no-repeat;
+   background-position: center;
+
+   animation-name: logo-fall;
+   animation-duration: 1.5s;
+   animation-timing-function: cubic-bezier(0.4, 0, 0.8, 0);
+
+   /* hidden text for screen readers / coping */
+   color: #0000;
+   cursor: default;
+   text-align: center;
+   font-size: 8em;
+}
+
+.register-button {
+   animation: fadeInDelayed 3.8s ease-out;
+
+   position: absolute;
+   left: 0;
+   right: 0;
+   top: 350px;
+
+   transform: scale(1);
+
+   text-align: center;
+   font-size: 3em;
+   text-shadow: 0 0 6px #0007;
+
+   transition: transform 0.2s ease-out;
+
+   &:hover {
+      transform: scale(1.1);
+   }
+
+   a {
+      color: #fff;
+      text-decoration: none;
+      padding: 10px;
+
+      &::before, &::after {
+         font-size: 0.7em;
+         padding: 20px;
+         content: "◀";
+         display: inline-block;
+      }
+
+      &::after {
+         content: "▶";
+      }
+   }
+}
+
+h3.more-text {
+   position: absolute;
+   left: 0;
+   right: 0;
+   top: 600px;
+
+   text-align: center;
+   font-size: 2em;
+   text-shadow: 0 0 6px #0007;
+   color: #fff;
+
+   animation: fadeInDelayed 4.3s ease-out;
+
+   &::after {
+      font-size: 0.7em;
+      content: "▼";
+      display: block;
+      position: relative;
+      animation: bounce 2s infinite ease-in-out;
+   }
+}
+
+@media (max-width: 900px) {
+   .castle-image {
+      padding: 0;
+      position: absolute;
+      right: -200px;
+   }
+
+   .hacktx-2021-logo {
+      font-size: 3em;
+   }
+}
+
+@keyframes logo-fall {
+   0% {
+      top: -1000px;
+   }
+
+   100% {
+      top: 100px;
+   }
+}
+
+@keyframes shake {
+   /* javascript to generate random offsets:
+   str=""; for (let i = 0; i <= 10; ++i) {
+      str += `${i * 10}% { top: ${Math.floor(Math.random() * 200 - 100)/((i+3))}px; left: ${Math.floor(Math.random() * 200 - 100)/((i+3))}px }\n`
+   }
+   */
+   0% { top: 24px; left: -19.333333333333332px }
+   10% { top: 6.5px; left: 18.5px }
+   20% { top: 19.4px; left: -3.2px }
+   30% { top: 4.666666666666667px; left: -12.166666666666666px }
+   40% { top: 12.571428571428571px; left: 11.714285714285714px }
+   50% { top: -0.125px; left: -11.25px }
+   60% { top: -9.333333333333334px; left: -0.3333333333333333px }
+   70% { top: -9.9px; left: -7.5px }
+   80% { top: 3.3636363636363638px; left: 5.181818181818182px }
+   90% { top: -4.166666666666667px; left: -0.16666666666666666px }
+   100% { top: 3.6153846153846154px; left: 5.846153846153846px }
+}
+
+@keyframes fadeInDelayed {
+   0% {
+      opacity: 0;
+   }
+
+   50% {
+      opacity: 0;
+   }
+
+   100% {
+      opacity: 1;
+   }
+}
+
+@keyframes bounce {
+   0% {
+      top: 0;
+   }
+
+   50% {
+      top: 10px;
+   }
+
+   100% {
+      top: 0;
+   }
+}
