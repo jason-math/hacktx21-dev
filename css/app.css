@@ -20,21 +20,44 @@ p, span, textarea, input, label, button, a {
 /*
 Header (castle, logo, register button)
 */
-header {
+#splash {
   position: relative;
-  min-height: 100vh; }
+  min-height: 50vw; 
+  background:linear-gradient(#80ffff, #ffdf80 30%);
+}
 
 .castle-image {
-  display: block;
-  width: 1280px;
-  min-width: 80%;
-  background: url("../images/grassbackground.png"), linear-gradient(#80ffff, #ffdf80 60%);
-  background-repeat: no-repeat;
-  /* move the grass background down to reveal the sky */
-  background-position: 0 calc(max(45vw, 720px) * 0.6), 0 0;
-  /* center the image using padding so that the
-      gradient background is maintained across the full width */
-  padding: 0 calc(50vw - (max(80%, 1280px) / 2)); }
+  position: absolute;
+  width: 100%;
+  z-index: 0;
+}
+
+#grass-image {
+  width: 100%;
+  margin-top: 34vw;
+  z-index: -2;
+}
+
+#rock-image {
+  position: absolute;
+  width: 100%;
+  margin-top: -16vw;
+  z-index: 20;
+}
+
+#lake-image {
+  position: absolute;
+  width: 100%;
+  margin-top: -25vw;
+  z-index: 21;
+}
+
+#grass-under-lake-image {
+  width: 100%;
+  margin-top: -1vw;
+  z-index: 19;
+}
+
 
 .hacktx-2021-logo {
   margin: 0 auto;
@@ -49,9 +72,6 @@ header {
   background: url("../images/hacktx-2021-logo.svg");
   background-repeat: no-repeat;
   background-position: center;
-  animation-name: logo-fall;
-  animation-duration: 1.5s;
-  animation-timing-function: cubic-bezier(0.4, 0, 0.8, 0);
   /* hidden text for screen readers / coping */
   color: #0000;
   cursor: default;
@@ -99,73 +119,3 @@ h3.more-text {
     display: block;
     position: relative;
     animation: bounce 2s infinite ease-in-out; }
-
-@media (max-width: 900px) {
-  .castle-image {
-    padding: 0;
-    position: absolute;
-    right: -200px; }
-  .hacktx-2021-logo {
-    font-size: 3em; } }
-
-@keyframes logo-fall {
-  0% {
-    top: -1000px; }
-  100% {
-    top: 100px; } }
-
-@keyframes shake {
-  /* javascript to generate random offsets:
-   str=""; for (let i = 0; i <= 10; ++i) {
-      str += `${i * 10}% { top: ${Math.floor(Math.random() * 200 - 100)/((i+3))}px; left: ${Math.floor(Math.random() * 200 - 100)/((i+3))}px }\n`
-   }
-   */
-  0% {
-    top: 24px;
-    left: -19.333333333333332px; }
-  10% {
-    top: 6.5px;
-    left: 18.5px; }
-  20% {
-    top: 19.4px;
-    left: -3.2px; }
-  30% {
-    top: 4.666666666666667px;
-    left: -12.166666666666666px; }
-  40% {
-    top: 12.571428571428571px;
-    left: 11.714285714285714px; }
-  50% {
-    top: -0.125px;
-    left: -11.25px; }
-  60% {
-    top: -9.333333333333334px;
-    left: -0.3333333333333333px; }
-  70% {
-    top: -9.9px;
-    left: -7.5px; }
-  80% {
-    top: 3.3636363636363638px;
-    left: 5.181818181818182px; }
-  90% {
-    top: -4.166666666666667px;
-    left: -0.16666666666666666px; }
-  100% {
-    top: 3.6153846153846154px;
-    left: 5.846153846153846px; } }
-
-@keyframes fadeInDelayed {
-  0% {
-    opacity: 0; }
-  50% {
-    opacity: 0; }
-  100% {
-    opacity: 1; } }
-
-@keyframes bounce {
-  0% {
-    top: 0; }
-  50% {
-    top: 10px; }
-  100% {
-    top: 0; } }
