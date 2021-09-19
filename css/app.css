@@ -1,121 +1,319 @@
 @charset "UTF-8";
 html {
-  background: #000;
+  background: #9fbc6f;
   position: relative;
-  animation-name: shake;
-  animation-delay: 1.45s;
-  animation-duration: 0.3s; }
+  width: 100%; }
 
 body {
   overflow-x: hidden;
-  margin: 0; }
+  position: relative;
+  user-select: none;
+  -webkit-user-drag: none;
+  width: 100%;
+  background-image: url("../images/grassbackground.png");
+  background-repeat: repeat-y;
+  margin: 0;
+  padding: 0;
+  background-size: contain; }
 
-/*
-Typography
-*/
 h1, h2, h3, h4, h5, h6,
 p, span, textarea, input, label, button, a {
   font-family: 'Museo', sans-serif; }
 
-/*
-Header (castle, logo, register button)
-*/
-#splash {
+.heading {
+  font-family: 'Museo', sans-serif;
+  color: #000;
+  font-weight: bold;
+  font-size: 3vw;
+  margin-bottom: 6%; }
+
+.normal-text {
+  font-family: 'Museo', sans-serif;
+  color: #000;
+  margin-bottom: 10%;
+  line-height: 1.5;
+  font-size: 1.35vw;
+  width: 100%; }
+
+.sky {
   position: relative;
-  min-height: 50vw; 
-  background:linear-gradient(#80ffff, #ffdf80 30%);
-}
+  background: linear-gradient(180deg, #94FAFF 0%, #FFE67F 100%);
+  height: 25vw;
+  width: 100%;
+  max-width: 100%; }
 
-.castle-image {
+.terrain {
+  position: relative;
+  top: 50vw;
+  height: 500vw; }
+
+#title {
   position: absolute;
-  width: 100%;
-  z-index: 0;
-}
+  top: 7vw;
+  left: 17.5vw;
+  width: 65%;
+  z-index: 2;
+  animation-name: logo-fall;
+  animation-duration: 1.5s;
+  animation-timing-function: cubic-bezier(0.4, 0, 0.8, 0); }
 
-#grass-image {
-  width: 100%;
-  margin-top: 34vw;
-  z-index: -2;
-}
-
-#rock-image {
+#castle {
   position: absolute;
-  width: 100%;
-  margin-top: -16vw;
-  z-index: 20;
-}
-
-#lake-image {
-  position: absolute;
-  width: 100%;
-  margin-top: -25vw;
-  z-index: 21;
-}
-
-#grass-under-lake-image {
-  width: 100%;
-  margin-top: -1vw;
-  z-index: 19;
-}
-
-
-.hacktx-2021-logo {
-  margin: 0 auto;
   width: 90%;
-  /* fixed height implicitly gives the logo background (not actual div content) a max-width
-      the height of the actual image background can be smaller than this as the width gets smaller */
-  height: 250px;
-  position: absolute;
-  top: 100px;
-  left: 0;
-  right: 0;
-  background: url("../images/hacktx-2021-logo.svg");
-  background-repeat: no-repeat;
-  background-position: center;
-  /* hidden text for screen readers / coping */
-  color: #0000;
-  cursor: default;
-  text-align: center;
-  font-size: 8em; }
+  top: 0%;
+  left: 5%; }
 
-.register-button {
+.button-register {
   animation: fadeInDelayed 3.8s ease-out;
+  max-width: 100%;
   position: absolute;
   left: 0;
   right: 0;
-  top: 350px;
+  top: 25vw;
   transform: scale(1);
   text-align: center;
   font-size: 3em;
   text-shadow: 0 0 6px #0007;
   transition: transform 0.2s ease-out; }
-  .register-button:hover {
+  .button-register:hover {
     transform: scale(1.1); }
-  .register-button a {
+  .button-register a {
     color: #fff;
     text-decoration: none;
     padding: 10px; }
-    .register-button a::before, .register-button a::after {
+    .button-register a::before, .button-register a::after {
       font-size: 0.7em;
       padding: 20px;
       content: "◀";
       display: inline-block; }
-    .register-button a::after {
+    .button-register a::after {
       content: "▶"; }
 
-h3.more-text {
+.button-more {
   position: absolute;
   left: 0;
   right: 0;
   top: 600px;
+  max-width: 100%;
   text-align: center;
   font-size: 2em;
   text-shadow: 0 0 6px #0007;
   color: #fff;
   animation: fadeInDelayed 4.3s ease-out; }
-  h3.more-text::after {
+  .button-more::after {
     font-size: 0.7em;
     content: "▼";
     display: block;
     position: relative;
     animation: bounce 2s infinite ease-in-out; }
+
+#guard1 {
+  position: absolute;
+  top: -17vw;
+  left: 20vw;
+  width: 5vw;
+  z-index: 3; }
+
+#guard2 {
+  position: absolute;
+  top: -17vw;
+  left: 38.5vw;
+  width: 5vw;
+  z-index: 3; }
+
+#what-text {
+  position: absolute;
+  top: -17vw;
+  left: 60vw; }
+
+#road1 {
+  position: absolute;
+  top: -17.58vw;
+  left: 25.5vw;
+  width: 12.7vw;
+  z-index: 1; }
+
+#road2 {
+  position: absolute;
+  top: 5.75vw;
+  left: 25.5vw;
+  width: 12.7vw;
+  z-index: 1; }
+
+#road3 {
+  position: absolute;
+  top: 5.75vw;
+  left: 38vw;
+  height: 12.7vw;
+  z-index: 1; }
+
+#road4 {
+  position: absolute;
+  top: 5.75vw;
+  left: 53.5vw;
+  height: 12.7vw;
+  z-index: 1; }
+
+#road5 {
+  position: absolute;
+  top: 5.75vw;
+  left: 76vw;
+  height: 12.7vw;
+  transform: rotate(180deg);
+  z-index: 1; }
+
+#what-heading {
+  position: absolute;
+  top: -18vw;
+  left: 50vw;
+  width: 40vw; }
+
+#what-text {
+  position: absolute;
+  top: -13vw;
+  left: 51vw;
+  width: 40vw; }
+
+#rock-terrain {
+  position: relative;
+  width: 100%;
+  top: 0vw; }
+
+#volcano {
+  position: absolute;
+  top: 16vw;
+  left: 35vw;
+  width: 40vw; }
+
+#road6 {
+  position: absolute;
+  top: 18.3vw;
+  left: 76vw;
+  width: 12.8vw;
+  z-index: 1; }
+
+#road7 {
+  position: absolute;
+  top: 25.3vw;
+  left: 76vw;
+  width: 12.8vw;
+  z-index: 1; }
+
+#road8 {
+  position: absolute;
+  top: 48.8vw;
+  left: 76vw;
+  width: 12.8vw;
+  z-index: 1;
+  transform: rotate(270deg); }
+
+#road9 {
+  position: absolute;
+  top: 48.8vw;
+  left: 52.7vw;
+  height: 12.8vw;
+  z-index: 1; }
+
+#road10 {
+  position: absolute;
+  top: 48.8vw;
+  left: 29.2vw;
+  height: 12.8vw;
+  z-index: 1; }
+
+#road11 {
+  position: absolute;
+  top: 48.8vw;
+  left: 20vw;
+  height: 12.8vw;
+  z-index: 1; }
+
+#road12 {
+  position: absolute;
+  top: 48.8vw;
+  left: 7.2vw;
+  height: 12.8vw;
+  z-index: 1;
+  transform: rotate(90deg); }
+
+#who-heading {
+  position: absolute;
+  top: 20vw;
+  left: 3vw;
+  width: 45vw;
+  z-index: 2; }
+
+#who-text {
+  position: absolute;
+  top: 25vw;
+  left: 4vw;
+  width: 34vw;
+  z-index: 2; }
+
+#road13 {
+  position: absolute;
+  top: 61.5vw;
+  left: 7.2vw;
+  width: 12.7vw;
+  z-index: 1; }
+
+@keyframes logo-fall {
+  0% {
+    top: -1000px; }
+  100% {
+    top: 100px; } }
+@keyframes shake {
+  /* javascript to generate random offsets:
+  str=""; for (let i = 0; i <= 10; ++i) {
+     str += `${i * 10}% { top: ${Math.floor(Math.random() * 200 - 100)/((i+3))}px; left: ${Math.floor(Math.random() * 200 - 100)/((i+3))}px }\n`
+  }
+  */
+  0% {
+    top: 24px;
+    left: -19.3333333333px; }
+  10% {
+    top: 6.5px;
+    left: 18.5px; }
+  20% {
+    top: 19.4px;
+    left: -3.2px; }
+  30% {
+    top: 4.666666666666667px;
+    left: -12.1666666667px; }
+  40% {
+    top: 12.571428571428571px;
+    left: 11.7142857143px; }
+  50% {
+    top: -0.125px;
+    left: -11.25px; }
+  60% {
+    top: -9.333333333333334px;
+    left: -0.3333333333px; }
+  70% {
+    top: -9.9px;
+    left: -7.5px; }
+  80% {
+    top: 3.3636363636363638px;
+    left: 5.1818181818px; }
+  90% {
+    top: -4.166666666666667px;
+    left: -0.1666666667px; }
+  100% {
+    top: 3.6153846153846154px;
+    left: 5.8461538462px; } }
+@keyframes fadeInDelayed {
+  0% {
+    opacity: 0; }
+  50% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+@keyframes bounce {
+  0% {
+    top: 0; }
+  50% {
+    top: 10px; }
+  100% {
+    top: 0; } }
+
+/*# sourceMappingURL=app.css.map */
