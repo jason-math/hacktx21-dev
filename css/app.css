@@ -224,16 +224,16 @@ p, span, textarea, input, label, button, a {
 #road11 {
   position: absolute;
   top: 48.8vw;
-  left: 20vw;
+  left: 18vw;
   height: 12.8vw;
   z-index: 1; }
 
 #road12 {
   position: absolute;
   top: 48.8vw;
-  left: 7.2vw;
+  left: 6.1vw;
   height: 12.8vw;
-  z-index: 1;
+  z-index: 2;
   transform: rotate(90deg); }
 
 #who-heading {
@@ -252,10 +252,19 @@ p, span, textarea, input, label, button, a {
 
 #road13 {
   position: absolute;
-  top: 61.5vw;
-  left: 7.2vw;
+  top: 59vw;
+  left: 6vw;
   width: 12.7vw;
-  z-index: 1; }
+  z-index: 1;
+  transform: rotate(180deg); }
+
+#lake {
+  position: absolute;
+  width: 100%;
+  top: 73vw;
+  left: -3.4vw;
+  z-index: 2;
+  width: 133%; }
 
 @keyframes logo-fall {
   0% {
