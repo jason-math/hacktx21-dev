@@ -58,8 +58,8 @@ p, span, textarea, input, label, button, a {
   width: 65%;
   z-index: 2;
   animation-name: logo-fall;
-  animation-duration: 1.5s;
-  animation-timing-function: cubic-bezier(0.4, 0, 0.8, 0);
+  animation-duration: 1s;
+  animation-timing-function: ease-out;
   user-select: none;
   -webkit-user-drag: none; }
 
@@ -72,7 +72,7 @@ p, span, textarea, input, label, button, a {
   -webkit-user-drag: none; }
 
 .button-register {
-  animation: fadeInDelayed 3.8s ease-out;
+  animation: fadeInDelayed 1.5s ease-out;
   max-width: 100%;
   position: absolute;
   left: 0;
@@ -101,14 +101,15 @@ p, span, textarea, input, label, button, a {
   position: absolute;
   left: 0;
   right: 0;
-  top: 600px;
+  top: 32vw;
   max-width: 100%;
   text-align: center;
   font-size: 2em;
   text-shadow: 0 0 6px #0007;
   color: #fff;
-  animation: fadeInDelayed 4.3s ease-out; }
+  animation: fadeInDelayed 1.8s ease-out; }
   .button-more::after {
+    top: 2vw;
     font-size: 0.7em;
     content: "▼";
     display: block;
@@ -139,40 +140,32 @@ p, span, textarea, input, label, button, a {
   left: 60vw; }
 
 #road1 {
-  position: absolute;
-  top: -17.58vw;
-  left: 25.5vw;
-  width: 12.7vw;
-  z-index: 1;
-  user-select: none;
-  -webkit-user-drag: none; }
+    position: absolute;
+    top: -17.58vw;
+    left: 25.8vw;
+    width: 12.76vw;
+    z-index: 1;}
 
 #road2 {
   position: absolute;
   top: 5.75vw;
-  left: 25.5vw;
-  width: 12.7vw;
-  z-index: 1;
-  user-select: none;
-  -webkit-user-drag: none; }
+  left: 25.8vw;
+  width: 12.76vw;
+  z-index: 1; }
 
 #road3 {
   position: absolute;
   top: 5.75vw;
-  left: 38vw;
-  height: 12.7vw;
-  z-index: 1;
-  user-select: none;
-  -webkit-user-drag: none; }
+  left: 38.4vw;
+  height: 12.76vw;
+  z-index: 1; }
 
 #road4 {
   position: absolute;
   top: 5.75vw;
   left: 53.5vw;
   height: 12.7vw;
-  z-index: 1;
-  user-select: none;
-  -webkit-user-drag: none; }
+  z-index: 1; }
 
 #road5 {
   position: absolute;
@@ -180,9 +173,7 @@ p, span, textarea, input, label, button, a {
   left: 76vw;
   height: 12.7vw;
   transform: rotate(180deg);
-  z-index: 1;
-  user-select: none;
-  -webkit-user-drag: none; }
+  z-index: 1; }
 
 #what-heading {
   position: absolute;
@@ -260,7 +251,7 @@ p, span, textarea, input, label, button, a {
 #road11 {
   position: absolute;
   top: 48.8vw;
-  left: 18vw;
+  left: 19vw;
   height: 12.8vw;
   z-index: 1;
   user-select: none;
@@ -268,9 +259,9 @@ p, span, textarea, input, label, button, a {
 
 #road12 {
   position: absolute;
-  top: 48.8vw;
-  left: 6.1vw;
-  height: 12.8vw;
+  top: 48.9vw;
+  left: 9.7vw;
+  height: 12.5vw;
   z-index: 2;
   transform: rotate(90deg);
   user-select: none;
@@ -292,19 +283,17 @@ p, span, textarea, input, label, button, a {
 
 #road13 {
   position: absolute;
-  top: 59vw;
-  left: 6vw;
+  top: 61.3vw;
+  left: 9.7vw;
   width: 12.7vw;
-  z-index: 1;
+  z-index: 2;
   transform: rotate(180deg);
   user-select: none;
   -webkit-user-drag: none; }
 
 #lake {
   position: absolute;
-  width: 100%;
   top: 73vw;
-  left: -3.4vw;
   z-index: 2;
   width: 133%;
   user-select: none;
@@ -348,12 +337,17 @@ p, span, textarea, input, label, button, a {
   #schedule .schedule-heading {
     color: white; }
     #schedule .schedule-heading #saturday-button, #schedule .schedule-heading #sunday-button {
+      font-size: 4vw;
       cursor: pointer;
       display: inline-block;
-      width: 50%;
-      text-align: center; }
+      width: 45%;
+      text-align: center;
+      border-radius: 5vw;
+      border: .3vw solid rgba(255, 255, 255, 0);}
     #schedule .schedule-heading #saturday-button.active, #schedule .schedule-heading #sunday-button.active {
-      text-decoration: underline; }
+      border-radius: 5vw;
+      border: .3vw solid rgb(255, 255, 255);
+      }
   #schedule .schedule-text {
     max-height: 45vw;
     overflow-y: auto;
@@ -382,7 +376,7 @@ p, span, textarea, input, label, button, a {
 #road14 {
   position: absolute;
   top: 115vw;
-  left: 6vw;
+  left: 9.7vw;
   width: 12.7vw;
   z-index: 1;
   user-select: none;
@@ -391,7 +385,7 @@ p, span, textarea, input, label, button, a {
 #road15 {
   position: absolute;
   top: 132.5vw;
-  left: 6vw;
+  left: 9.7vw;
   width: 12.7vw;
   z-index: 1;
   user-select: none;
@@ -400,7 +394,7 @@ p, span, textarea, input, label, button, a {
 #road16 {
   position: absolute;
   top: 155vw;
-  left: 6vw;
+  left: 9.7vw;
   width: 12.8vw;
   z-index: 1;
   user-select: none;
@@ -409,7 +403,7 @@ p, span, textarea, input, label, button, a {
 #road17 {
   position: absolute;
   top: 155vw;
-  left: 18.5vw;
+  left: 22.3vw;
   height: 12.8vw;
   z-index: 1;
   user-select: none;
@@ -427,10 +421,9 @@ p, span, textarea, input, label, button, a {
 #road19 {
   position: absolute;
   top: 155vw;
-  left: 60.9vw;
-  width: 14.6vw;
-  height: 12.8vw;
-  z-index: 0;
+  left: 62.23vw;
+  height: 14vw;
+  z-index: 1;
   transform: rotate(180deg);
   user-select: none;
   -webkit-user-drag: none; }
@@ -439,16 +432,17 @@ p, span, textarea, input, label, button, a {
   position: relative;
   width: 100%;
   transform: scaleX(-1);
-  top: 99vw;
+  top: 98.45vw;
   z-index: 2;
   user-select: none;
   -webkit-user-drag: none; }
 
 @keyframes logo-fall {
   0% {
-    top: -1000px; }
+    transform: translate3d(0, -60vw, 0); }
   100% {
-    top: 100px; } }
+    transform: translate3d(0, 0px, 0);} 
+  }  
 @keyframes shake {
   /* javascript to generate random offsets:
   str=""; for (let i = 0; i <= 10; ++i) {
@@ -497,10 +491,10 @@ p, span, textarea, input, label, button, a {
     opacity: 1; } }
 @keyframes bounce {
   0% {
-    top: 0; }
+    transform: translate3d(0, 0, 0); }
   50% {
-    top: 10px; }
+    transform: translate3d(0, -2vw, 0);}
   100% {
-    top: 0; } }
-
+    transform: translate3d(0, 0, 0);} 
+  }
 /*# sourceMappingURL=app.css.map */
