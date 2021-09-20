@@ -4,14 +4,32 @@
 //$skygradient: linear-gradient(#{$skygradient-blue}, #{$skygradient-yellow} #{$skygradient-proportion * 70}#{"%"});
 
 html {
-   background: #9fbc6f
-   ;
+   background: #9fbc6f;
    position: relative;
    width: 100%;
+   // ::-webkit-scrollbar {
+   //    width: 20px;
+   //  }
+    
+   //  ::-webkit-scrollbar-track {
+   //    background-color: inherit;
+   //  }
+    
+   //  ::-webkit-scrollbar-thumb {
+   //    background-color: #d6dee1;
+   //    border-radius: 20px;
+   //    border: 6px solid transparent;
+   //    background-clip: content-box;
+   //  }
+    
+   //  ::-webkit-scrollbar-thumb:hover {
+   //    background-color: #a8bbbf;
+   //  }
+
 }
 
 body {
-   overflow-x: hidden;
+   overflow-x: clip;
    position: relative;
    user-select: none;
    -webkit-user-drag: none;
@@ -52,11 +70,15 @@ p,span,textarea,input,label,button,a {
    height: 25vw;
    width: 100%;
    max-width: 100%;
+   user-select: none;
+   -webkit-user-drag: none;
 }
 .terrain {
    position: relative;
    top: 50vw;
    height: 500vw;
+   user-select: none;
+   -webkit-user-drag: none;
 }
 
 #title {
@@ -69,6 +91,8 @@ p,span,textarea,input,label,button,a {
    animation-name: logo-fall;
    animation-duration: 1.5s;
    animation-timing-function: cubic-bezier(0.4, 0, 0.8, 0);
+   user-select: none;
+   -webkit-user-drag: none;
 }
 
 #castle {
@@ -76,6 +100,8 @@ p,span,textarea,input,label,button,a {
    width: 90%;
    top: 0%;
    left: 5%;
+   user-select: none;
+   -webkit-user-drag: none;
 }
 
 .button-register {
@@ -144,6 +170,8 @@ p,span,textarea,input,label,button,a {
    left: 20vw;
    width: 5vw;
    z-index: 3;
+   user-select: none;
+   -webkit-user-drag: none;
 }
 
 #guard2 {
@@ -152,6 +180,8 @@ p,span,textarea,input,label,button,a {
    left: 38.5vw;
    width: 5vw;
    z-index: 3;
+   user-select: none;
+   -webkit-user-drag: none;
 }
 
 #what-text {
@@ -166,6 +196,8 @@ p,span,textarea,input,label,button,a {
    left: 25.5vw;
    width: 12.7vw;
    z-index: 1;
+   user-select: none;
+   -webkit-user-drag: none;
 }
 #road2 {
    position: absolute;
@@ -173,6 +205,8 @@ p,span,textarea,input,label,button,a {
    left: 25.5vw;
    width: 12.7vw;
    z-index: 1;
+   user-select: none;
+   -webkit-user-drag: none;
 }
 #road3 {
    position: absolute;
@@ -180,6 +214,8 @@ p,span,textarea,input,label,button,a {
    left: 38vw;
    height: 12.7vw;
    z-index: 1;
+   user-select: none;
+   -webkit-user-drag: none;
 }
 #road4 {
    position: absolute;
@@ -187,6 +223,8 @@ p,span,textarea,input,label,button,a {
    left: 53.5vw;
    height: 12.7vw;
    z-index: 1;
+   user-select: none;
+   -webkit-user-drag: none;
 }
 #road5 {
    position: absolute;
@@ -195,6 +233,8 @@ p,span,textarea,input,label,button,a {
    height: 12.7vw;
    transform: rotate(180deg);
    z-index: 1;
+   user-select: none;
+   -webkit-user-drag: none;
 }
 
 #what-heading {
@@ -212,13 +252,17 @@ p,span,textarea,input,label,button,a {
 #rock-terrain {
    position: relative;
    width: 100%;
-   top: 0vw
+   top: 0vw;
+   user-select: none;
+   -webkit-user-drag: none;
 }
 #volcano {
    position: absolute;
    top: 16vw;
    left: 35vw;
    width: 40vw;
+   user-select: none;
+   -webkit-user-drag: none;
 }
 #road6 {
    position: absolute;
@@ -226,6 +270,8 @@ p,span,textarea,input,label,button,a {
    left: 76vw;
    width: 12.8vw;
    z-index: 1;
+   user-select: none;
+   -webkit-user-drag: none;
 }
 #road7 {
    position: absolute;
@@ -233,6 +279,8 @@ p,span,textarea,input,label,button,a {
    left: 76vw;
    width: 12.8vw;
    z-index: 1;
+   user-select: none;
+   -webkit-user-drag: none;
 }
 #road8 {
    position: absolute;
@@ -241,6 +289,8 @@ p,span,textarea,input,label,button,a {
    width: 12.8vw;
    z-index: 1;
    transform: rotate(270deg);
+   user-select: none;
+   -webkit-user-drag: none;
 }
 #road9 {
    position: absolute;
@@ -248,6 +298,8 @@ p,span,textarea,input,label,button,a {
    left: 52.7vw;
    height: 12.8vw;
    z-index: 1;
+   user-select: none;
+   -webkit-user-drag: none;
 }
 #road10 {
    position: absolute;
@@ -255,6 +307,8 @@ p,span,textarea,input,label,button,a {
    left: 29.2vw;
    height: 12.8vw;
    z-index: 1;
+   user-select: none;
+   -webkit-user-drag: none;
 }
 #road11 {
    position: absolute;
@@ -262,6 +316,8 @@ p,span,textarea,input,label,button,a {
    left: 18vw;
    height: 12.8vw;
    z-index: 1;
+   user-select: none;
+   -webkit-user-drag: none;
 }
 #road12 {
    position: absolute;
@@ -270,6 +326,8 @@ p,span,textarea,input,label,button,a {
    height: 12.8vw;
    z-index: 2;
    transform: rotate(90deg);
+   user-select: none;
+   -webkit-user-drag: none;
 }
 #who-heading {
    position: absolute;
@@ -292,6 +350,8 @@ p,span,textarea,input,label,button,a {
    width: 12.7vw;
    z-index: 1;
    transform: rotate(180deg);
+   user-select: none;
+   -webkit-user-drag: none;
 }
 #lake {
    position: absolute;
@@ -300,6 +360,28 @@ p,span,textarea,input,label,button,a {
    left: -3.4vw;
    z-index: 2;
    width: 133%;
+   user-select: none;
+   -webkit-user-drag: none;
+}
+
+#ducks1 {
+   position: absolute;
+   top: 95vw;
+   left: 35vw;
+   width: 15vw;
+   z-index: 3;
+   user-select: none;
+   -webkit-user-drag: none;
+}
+
+#ducks2 {
+   position: absolute;
+   top: 130vw;
+   left: 25vw;
+   width: 15vw;
+   z-index: 3;
+   user-select: none;
+   -webkit-user-drag: none;
 }
 
 #schedule {
@@ -308,6 +390,26 @@ p,span,textarea,input,label,button,a {
    top: 85vw;
    width: 40vw;
    z-index: 100;
+   
+
+   ::-webkit-scrollbar {
+      width: 20px;
+    }
+    
+    ::-webkit-scrollbar-track {
+      background-color: transparent;
+    }
+    
+    ::-webkit-scrollbar-thumb {
+      background-color: #d6dee1;
+      border-radius: 20px;
+      border: 6px solid transparent;
+      background-clip: content-box;
+    }
+    
+    ::-webkit-scrollbar-thumb:hover {
+      background-color: #a8bbbf;
+    }
 
    .schedule-heading {
       color: white;
@@ -325,8 +427,11 @@ p,span,textarea,input,label,button,a {
    }
 
    .schedule-text {
+      max-height: 45vw;
+      overflow-y: auto;
       color: white;
       cursor: pointer;
+      
 
       .schedule-event-name {
          display: inline-block;
@@ -361,6 +466,73 @@ p,span,textarea,input,label,button,a {
    }
 }
 
+#road14 {
+   position: absolute;
+   top: 115vw;
+   left: 6vw;
+   width: 12.7vw;
+   z-index: 1;
+   user-select: none;
+   -webkit-user-drag: none;
+}
+#road15 {
+   position: absolute;
+   top: 132.5vw;
+   left: 6vw;
+   width: 12.7vw;
+   z-index: 1;
+   user-select: none;
+   -webkit-user-drag: none;
+}
+
+#road16 {
+   position: absolute;
+   top: 155vw;
+   left: 6vw;
+   width: 12.8vw;
+   z-index: 1;
+   user-select: none;
+   -webkit-user-drag: none;
+}
+#road17 {
+   position: absolute;
+   top: 155vw;
+   left: 18.5vw;
+   height: 12.8vw;
+   z-index: 1;
+   user-select: none;
+   -webkit-user-drag: none;
+}
+#road18 {
+   position: absolute;
+   top: 155vw;
+   left: 42vw;
+   height: 12.8vw;
+   z-index: 1;
+   user-select: none;
+   -webkit-user-drag: none;
+}
+#road19 {
+   position: absolute;
+   top: 155vw;
+   left: 60.9vw;
+   width: 14.6vw;
+   height: 12.8vw;
+   z-index: 0;
+   transform: rotate(180deg);
+   user-select: none;
+   -webkit-user-drag: none;
+}
+   
+#forest {
+   position: relative;
+   width: 100%;
+   transform: scaleX(-1);
+   top: 99vw;
+   z-index: 2;
+   user-select: none;
+   -webkit-user-drag: none;
+}
 @keyframes logo-fall {
    0% {
       top: -1000px;
