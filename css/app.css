@@ -266,20 +266,59 @@ p, span, textarea, input, label, button, a {
   z-index: 2;
   width: 133%; }
 
+#schedule {
+  position: absolute;
+  right: 5vw;
+  top: 85vw;
+  width: 40vw;
+  z-index: 100; }
+  #schedule .schedule-heading {
+    color: white; }
+    #schedule .schedule-heading #saturday-button, #schedule .schedule-heading #sunday-button {
+      cursor: pointer;
+      display: inline-block;
+      width: 50%;
+      text-align: center; }
+    #schedule .schedule-heading #saturday-button.active, #schedule .schedule-heading #sunday-button.active {
+      text-decoration: underline; }
+  #schedule .schedule-text {
+    color: white;
+    cursor: pointer; }
+    #schedule .schedule-text .schedule-event-name {
+      display: inline-block;
+      font-weight: bold;
+      font-size: 1.2em;
+      width: 33vw; }
+    #schedule .schedule-text p:nth-of-type(1) {
+      margin: 0;
+      padding-top: 20px; }
+    #schedule .schedule-text p:nth-of-type(2) {
+      margin: 0;
+      max-height: 0;
+      transition: max-height 0.3s;
+      overflow: hidden; }
+    #schedule .schedule-text .schedule-item:focus-within p:nth-of-type(2) {
+      max-height: 10vw; }
+  #schedule #saturday-schedule, #schedule #sunday-schedule {
+    display: none; }
+  #schedule #saturday-schedule.active, #schedule #sunday-schedule.active {
+    display: block; }
+
 @keyframes logo-fall {
   0% {
     top: -1000px; }
   100% {
     top: 100px; } }
+
 @keyframes shake {
   /* javascript to generate random offsets:
-  str=""; for (let i = 0; i <= 10; ++i) {
-     str += `${i * 10}% { top: ${Math.floor(Math.random() * 200 - 100)/((i+3))}px; left: ${Math.floor(Math.random() * 200 - 100)/((i+3))}px }\n`
-  }
-  */
+   str=""; for (let i = 0; i <= 10; ++i) {
+      str += `${i * 10}% { top: ${Math.floor(Math.random() * 200 - 100)/((i+3))}px; left: ${Math.floor(Math.random() * 200 - 100)/((i+3))}px }\n`
+   }
+   */
   0% {
     top: 24px;
-    left: -19.3333333333px; }
+    left: -19.333333333333332px; }
   10% {
     top: 6.5px;
     left: 18.5px; }
@@ -288,28 +327,29 @@ p, span, textarea, input, label, button, a {
     left: -3.2px; }
   30% {
     top: 4.666666666666667px;
-    left: -12.1666666667px; }
+    left: -12.166666666666666px; }
   40% {
     top: 12.571428571428571px;
-    left: 11.7142857143px; }
+    left: 11.714285714285714px; }
   50% {
     top: -0.125px;
     left: -11.25px; }
   60% {
     top: -9.333333333333334px;
-    left: -0.3333333333px; }
+    left: -0.3333333333333333px; }
   70% {
     top: -9.9px;
     left: -7.5px; }
   80% {
     top: 3.3636363636363638px;
-    left: 5.1818181818px; }
+    left: 5.181818181818182px; }
   90% {
     top: -4.166666666666667px;
-    left: -0.1666666667px; }
+    left: -0.16666666666666666px; }
   100% {
     top: 3.6153846153846154px;
-    left: 5.8461538462px; } }
+    left: 5.846153846153846px; } }
+
 @keyframes fadeInDelayed {
   0% {
     opacity: 0; }
@@ -317,6 +357,7 @@ p, span, textarea, input, label, button, a {
     opacity: 0; }
   100% {
     opacity: 1; } }
+
 @keyframes bounce {
   0% {
     top: 0; }
@@ -324,5 +365,3 @@ p, span, textarea, input, label, button, a {
     top: 10px; }
   100% {
     top: 0; } }
-
-/*# sourceMappingURL=app.css.map */
