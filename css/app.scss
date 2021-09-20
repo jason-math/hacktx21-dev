@@ -1,91 +1,116 @@
-$skygradient-proportion: 0.6;
-$skygradient-blue: rgb(128,255,255);
-$skygradient-yellow: rgb(255,223,128);
-$skygradient: linear-gradient(#{$skygradient-blue}, #{$skygradient-yellow} #{$skygradient-proportion * 100}#{"%"});
+//$skygradient-proportion: 0.6;
+//$skygradient-blue: rgb(128,255,255);
+//$skygradient-yellow: rgb(255,223,128);
+//$skygradient: linear-gradient(#{$skygradient-blue}, #{$skygradient-yellow} #{$skygradient-proportion * 70}#{"%"});
 
 html {
-   background: #000;
+   background: #9fbc6f;
    position: relative;
-   animation-name: shake;
-   animation-delay: 1.45s;
-   animation-duration: 0.3s;
+   width: 100%;
+   // ::-webkit-scrollbar {
+   //    width: 20px;
+   //  }
+    
+   //  ::-webkit-scrollbar-track {
+   //    background-color: inherit;
+   //  }
+    
+   //  ::-webkit-scrollbar-thumb {
+   //    background-color: #d6dee1;
+   //    border-radius: 20px;
+   //    border: 6px solid transparent;
+   //    background-clip: content-box;
+   //  }
+    
+   //  ::-webkit-scrollbar-thumb:hover {
+   //    background-color: #a8bbbf;
+   //  }
+
 }
 
 body {
-   overflow-x: hidden;
+   overflow-x: clip;
+   position: relative;
+   user-select: none;
+   -webkit-user-drag: none;
+   width: 100%;
+   background-image: url("../images/grassbackground.png");
+   background-repeat: repeat-y;
    margin: 0;
+   padding: 0;
+   background-size: contain;
 }
-
-/*
-Typography
-*/
 
 h1,h2,h3,h4,h5,h6,
 p,span,textarea,input,label,button,a {
    font-family: 'Museo', sans-serif;
 }
 
-/*
-Header (castle, logo, register button)
-*/
+.heading {
+   font-family: 'Museo', sans-serif;
+   color: #000;
+   font-weight: bold;
+   font-size: 3vw;
+   margin-bottom: 6%;
+}
 
-header {
+.normal-text {
+   font-family: 'Museo', sans-serif;
+   color: #000;
+   margin-bottom: 10%;
+   line-height: 1.5;
+   font-size: 1.35vw;
+   width: 100%;
+}
+
+
+.sky {
    position: relative;
-   min-height: 100vh;
+   background: linear-gradient(180deg, #94FAFF 0%, #FFE67F 100%);
+   height: 25vw;
+   width: 100%;
+   max-width: 100%;
+   user-select: none;
+   -webkit-user-drag: none;
+}
+.terrain {
+   position: relative;
+   top: 50vw;
+   height: 500vw;
+   user-select: none;
+   -webkit-user-drag: none;
 }
 
-.castle-image {
-   display: block;
-   width: 1280px;
-   min-width: 80%;
-
-   $actual-height: "max(45vw, 720px)";
-   $actual-width: "max(80%, 1280px)";
-
-   background: url("../images/grassbackground.png"), $skygradient;
-   background-repeat: no-repeat;
-   /* move the grass background down to reveal the sky */
-   background-position: 0 calc(#{$actual-height} * #{$skygradient-proportion}), 0 0;
-
-   /* center the image using padding so that the
-      gradient background is maintained across the full width */
-   padding: 0 calc(50vw - (#{$actual-width} / 2));
-}
-
-.hacktx-2021-logo {
-   margin: 0 auto;
-   width: 90%;
-   /* fixed height implicitly gives the logo background (not actual div content) a max-width
-      the height of the actual image background can be smaller than this as the width gets smaller */
-   height: 250px;
-
+#title {
    position: absolute;
-   top: 100px;
-   left: 0;
-   right: 0;
-
-   background: url("../images/hacktx-2021-logo.svg");
-   background-repeat: no-repeat;
-   background-position: center;
+   top: 7vw;
+   left: 17.5vw;
+   width: 65%;
+   z-index: 2;
 
    animation-name: logo-fall;
    animation-duration: 1.5s;
    animation-timing-function: cubic-bezier(0.4, 0, 0.8, 0);
-
-   /* hidden text for screen readers / coping */
-   color: #0000;
-   cursor: default;
-   text-align: center;
-   font-size: 8em;
+   user-select: none;
+   -webkit-user-drag: none;
 }
 
-.register-button {
-   animation: fadeInDelayed 3.8s ease-out;
+#castle {
+   position: absolute;
+   width: 90%;
+   top: 0%;
+   left: 5%;
+   user-select: none;
+   -webkit-user-drag: none;
+}
 
+.button-register {
+   animation: fadeInDelayed 3.8s ease-out;
+   max-width: 100%;
    position: absolute;
    left: 0;
    right: 0;
-   top: 350px;
+   top: 25vw;
 
    transform: scale(1);
 
@@ -117,12 +142,12 @@ header {
    }
 }
 
-h3.more-text {
+.button-more {
    position: absolute;
    left: 0;
    right: 0;
    top: 600px;
-
+   max-width: 100%;
    text-align: center;
    font-size: 2em;
    text-shadow: 0 0 6px #0007;
@@ -139,18 +164,375 @@ h3.more-text {
    }
 }
 
-@media (max-width: 900px) {
-   .castle-image {
-      padding: 0;
-      position: absolute;
-      right: -200px;
+#guard1 {
+   position: absolute;
+   top: -17vw;
+   left: 20vw;
+   width: 5vw;
+   z-index: 3;
+   user-select: none;
+   -webkit-user-drag: none;
+}
+
+#guard2 {
+   position: absolute;
+   top: -17vw;
+   left: 38.5vw;
+   width: 5vw;
+   z-index: 3;
+   user-select: none;
+   -webkit-user-drag: none;
+}
+
+#what-text {
+   position: absolute;
+   top: -17vw;
+   left: 60vw;
+}
+
+#road1 {
+   position: absolute;
+   top: -17.58vw;
+   left: 25.5vw;
+   width: 12.7vw;
+   z-index: 1;
+   user-select: none;
+   -webkit-user-drag: none;
+}
+#road2 {
+   position: absolute;
+   top: 5.75vw;
+   left: 25.5vw;
+   width: 12.7vw;
+   z-index: 1;
+   user-select: none;
+   -webkit-user-drag: none;
+}
+#road3 {
+   position: absolute;
+   top: 5.75vw;
+   left: 38vw;
+   height: 12.7vw;
+   z-index: 1;
+   user-select: none;
+   -webkit-user-drag: none;
+}
+#road4 {
+   position: absolute;
+   top: 5.75vw;
+   left: 53.5vw;
+   height: 12.7vw;
+   z-index: 1;
+   user-select: none;
+   -webkit-user-drag: none;
+}
+#road5 {
+   position: absolute;
+   top: 5.75vw;
+   left: 76vw;
+   height: 12.7vw;
+   transform: rotate(180deg);
+   z-index: 1;
+   user-select: none;
+   -webkit-user-drag: none;
+}
+
+#what-heading {
+   position: absolute;
+   top: -18vw;
+   left: 50vw;
+   width: 40vw;
+}
+#what-text {
+   position: absolute;
+   top: -13vw;
+   left: 51vw;
+   width: 40vw;
+}
+#rock-terrain {
+   position: relative;
+   width: 100%;
+   top: 0vw;
+   user-select: none;
+   -webkit-user-drag: none;
+}
+#volcano {
+   position: absolute;
+   top: 16vw;
+   left: 35vw;
+   width: 40vw;
+   user-select: none;
+   -webkit-user-drag: none;
+}
+#road6 {
+   position: absolute;
+   top: 18.3vw;
+   left: 76vw;
+   width: 12.8vw;
+   z-index: 1;
+   user-select: none;
+   -webkit-user-drag: none;
+}
+#road7 {
+   position: absolute;
+   top: 25.3vw;
+   left: 76vw;
+   width: 12.8vw;
+   z-index: 1;
+   user-select: none;
+   -webkit-user-drag: none;
+}
+#road8 {
+   position: absolute;
+   top: 48.8vw;
+   left: 76vw;
+   width: 12.8vw;
+   z-index: 1;
+   transform: rotate(270deg);
+   user-select: none;
+   -webkit-user-drag: none;
+}
+#road9 {
+   position: absolute;
+   top: 48.8vw;
+   left: 52.7vw;
+   height: 12.8vw;
+   z-index: 1;
+   user-select: none;
+   -webkit-user-drag: none;
+}
+#road10 {
+   position: absolute;
+   top: 48.8vw;
+   left: 29.2vw;
+   height: 12.8vw;
+   z-index: 1;
+   user-select: none;
+   -webkit-user-drag: none;
+}
+#road11 {
+   position: absolute;
+   top: 48.8vw;
+   left: 18vw;
+   height: 12.8vw;
+   z-index: 1;
+   user-select: none;
+   -webkit-user-drag: none;
+}
+#road12 {
+   position: absolute;
+   top: 48.8vw;
+   left: 6.1vw;
+   height: 12.8vw;
+   z-index: 2;
+   transform: rotate(90deg);
+   user-select: none;
+   -webkit-user-drag: none;
+}
+#who-heading {
+   position: absolute;
+   top: 20vw;
+   left: 3vw;
+   width: 45vw;
+   z-index: 2;
+}
+#who-text {
+   position: absolute;
+   top: 25vw;
+   left: 4vw;
+   width: 34vw;
+   z-index: 2;
+}
+#road13 {
+   position: absolute;
+   top: 59vw;
+   left: 6vw;
+   width: 12.7vw;
+   z-index: 1;
+   transform: rotate(180deg);
+   user-select: none;
+   -webkit-user-drag: none;
+}
+#lake {
+   position: absolute;
+   width: 100%;
+   top: 73vw;
+   left: -3.4vw;
+   z-index: 2;
+   width: 133%;
+   user-select: none;
+   -webkit-user-drag: none;
+}
+
+#ducks1 {
+   position: absolute;
+   top: 95vw;
+   left: 35vw;
+   width: 15vw;
+   z-index: 3;
+   user-select: none;
+   -webkit-user-drag: none;
+}
+
+#ducks2 {
+   position: absolute;
+   top: 130vw;
+   left: 25vw;
+   width: 15vw;
+   z-index: 3;
+   user-select: none;
+   -webkit-user-drag: none;
+}
+
+#schedule {
+   position: absolute;
+   right: 5vw;
+   top: 85vw;
+   width: 40vw;
+   z-index: 100;
+   
+
+   ::-webkit-scrollbar {
+      width: 20px;
+    }
+    
+    ::-webkit-scrollbar-track {
+      background-color: transparent;
+    }
+    
+    ::-webkit-scrollbar-thumb {
+      background-color: #d6dee1;
+      border-radius: 20px;
+      border: 6px solid transparent;
+      background-clip: content-box;
+    }
+    
+    ::-webkit-scrollbar-thumb:hover {
+      background-color: #a8bbbf;
+    }
+
+   .schedule-heading {
+      color: white;
+
+      #saturday-button, #sunday-button {
+         cursor: pointer;
+         display: inline-block;
+         width: 50%;
+         text-align: center;
+      }
+
+      #saturday-button.active, #sunday-button.active {
+         text-decoration: underline;
+      }
    }
 
-   .hacktx-2021-logo {
-      font-size: 3em;
+   .schedule-text {
+      max-height: 45vw;
+      overflow-y: auto;
+      color: white;
+      cursor: pointer;
+      
+
+      .schedule-event-name {
+         display: inline-block;
+         font-weight: bold;
+         font-size: 1.2em;
+         width: 33vw;
+      }
+
+      p:nth-of-type(1) {
+         margin: 0;
+         padding-top: 20px;
+      }
+
+      p:nth-of-type(2) {
+         margin: 0;
+         max-height: 0;
+         transition: max-height 0.3s;
+         overflow: hidden;
+      }
+
+      .schedule-item:focus-within p:nth-of-type(2) {
+         max-height: 10vw;
+      }
+   }
+
+   #saturday-schedule, #sunday-schedule {
+      display: none;
+   }
+
+   #saturday-schedule.active, #sunday-schedule.active {
+      display: block;
    }
 }
 
+#road14 {
+   position: absolute;
+   top: 115vw;
+   left: 6vw;
+   width: 12.7vw;
+   z-index: 1;
+   user-select: none;
+   -webkit-user-drag: none;
+}
+#road15 {
+   position: absolute;
+   top: 132.5vw;
+   left: 6vw;
+   width: 12.7vw;
+   z-index: 1;
+   user-select: none;
+   -webkit-user-drag: none;
+}
+
+#road16 {
+   position: absolute;
+   top: 155vw;
+   left: 6vw;
+   width: 12.8vw;
+   z-index: 1;
+   user-select: none;
+   -webkit-user-drag: none;
+}
+#road17 {
+   position: absolute;
+   top: 155vw;
+   left: 18.5vw;
+   height: 12.8vw;
+   z-index: 1;
+   user-select: none;
+   -webkit-user-drag: none;
+}
+#road18 {
+   position: absolute;
+   top: 155vw;
+   left: 42vw;
+   height: 12.8vw;
+   z-index: 1;
+   user-select: none;
+   -webkit-user-drag: none;
+}
+#road19 {
+   position: absolute;
+   top: 155vw;
+   left: 60.9vw;
+   width: 14.6vw;
+   height: 12.8vw;
+   z-index: 0;
+   transform: rotate(180deg);
+   user-select: none;
+   -webkit-user-drag: none;
+}
+   
+#forest {
+   position: relative;
+   width: 100%;
+   transform: scaleX(-1);
+   top: 99vw;
+   z-index: 2;
+   user-select: none;
+   -webkit-user-drag: none;
+}
 @keyframes logo-fall {
    0% {
       top: -1000px;
