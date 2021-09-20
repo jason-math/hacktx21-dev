@@ -7,6 +7,24 @@ const volcano = bodymovin.loadAnimation({
     name: "Volcano", // Name for future reference. Optional.
 });
 
+const ducks1 = bodymovin.loadAnimation({
+    container: document.getElementById('ducks1'), // Required
+    path: 'images/ducks.json', // Required
+    renderer: 'svg', // Required
+    loop: true, // Optional
+    autoplay: true, // Optional
+    name: "Ducks1", // Name for future reference. Optional.
+});
+
+const ducks2 = bodymovin.loadAnimation({
+    container: document.getElementById('ducks2'), // Required
+    path: 'images/ducks.json', // Required
+    renderer: 'svg', // Required
+    loop: true, // Optional
+    autoplay: false, // Optional
+    name: "Ducks2", // Name for future reference. Optional.
+});
+
 const SUNDAY_BUTTON = document.getElementById('sunday-button');
 const SATURDAY_BUTTON = document.getElementById('saturday-button');
 const SUNDAY_SCHEDULE = document.getElementById('sunday-schedule');
