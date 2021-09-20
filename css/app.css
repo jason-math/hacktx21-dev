@@ -45,7 +45,7 @@ p, span, textarea, input, label, button, a {
 .terrain {
   position: relative;
   top: 50vw;
-  height: 500vw; }
+  height: 300vw; }
 
 #title {
   position: absolute;
@@ -54,8 +54,8 @@ p, span, textarea, input, label, button, a {
   width: 65%;
   z-index: 2;
   animation-name: logo-fall;
-  animation-duration: 1.5s;
-  animation-timing-function: cubic-bezier(0.4, 0, 0.8, 0); }
+  animation-duration: 1s;
+  animation-timing-function: ease-out;}
 
 #castle {
   position: absolute;
@@ -64,7 +64,7 @@ p, span, textarea, input, label, button, a {
   left: 5%; }
 
 .button-register {
-  animation: fadeInDelayed 3.8s ease-out;
+  animation: fadeInDelayed 1.5s ease-out;
   max-width: 100%;
   position: absolute;
   left: 0;
@@ -93,14 +93,15 @@ p, span, textarea, input, label, button, a {
   position: absolute;
   left: 0;
   right: 0;
-  top: 600px;
+  top: 32vw;
   max-width: 100%;
   text-align: center;
   font-size: 2em;
   text-shadow: 0 0 6px #0007;
   color: #fff;
-  animation: fadeInDelayed 4.3s ease-out; }
+  animation: fadeInDelayed 1.8s ease-out; }
   .button-more::after {
+    top: 2vw;
     font-size: 0.7em;
     content: "▼";
     display: block;
@@ -127,24 +128,24 @@ p, span, textarea, input, label, button, a {
   left: 60vw; }
 
 #road1 {
-  position: absolute;
-  top: -17.58vw;
-  left: 25.5vw;
-  width: 12.7vw;
-  z-index: 1; }
+    position: absolute;
+    top: -17.58vw;
+    left: 25.8vw;
+    width: 12.76vw;
+    z-index: 1;}
 
 #road2 {
   position: absolute;
   top: 5.75vw;
-  left: 25.5vw;
-  width: 12.7vw;
+  left: 25.8vw;
+  width: 12.76vw;
   z-index: 1; }
 
 #road3 {
   position: absolute;
   top: 5.75vw;
-  left: 38vw;
-  height: 12.7vw;
+  left: 38.4vw;
+  height: 12.76vw;
   z-index: 1; }
 
 #road4 {
@@ -231,7 +232,7 @@ p, span, textarea, input, label, button, a {
 #road12 {
   position: absolute;
   top: 48.8vw;
-  left: 6.1vw;
+  left: 10.4vw;
   height: 12.8vw;
   z-index: 2;
   transform: rotate(90deg); }
@@ -252,19 +253,17 @@ p, span, textarea, input, label, button, a {
 
 #road13 {
   position: absolute;
-  top: 59vw;
-  left: 6vw;
+  top: 59.5vw;
+  left: 10.3vw;
   width: 12.7vw;
   z-index: 1;
   transform: rotate(180deg); }
 
 #lake {
   position: absolute;
-  width: 100%;
+  width: 140%;
   top: 73vw;
-  left: -3.4vw;
-  z-index: 2;
-  width: 133%; }
+  z-index: 2;}
 
 #schedule {
   position: absolute;
@@ -275,12 +274,17 @@ p, span, textarea, input, label, button, a {
   #schedule .schedule-heading {
     color: white; }
     #schedule .schedule-heading #saturday-button, #schedule .schedule-heading #sunday-button {
+      font-size: 4vw;
       cursor: pointer;
       display: inline-block;
-      width: 50%;
-      text-align: center; }
+      width: 45%;
+      text-align: center;
+      border-radius: 5vw;
+      border: .3vw solid rgba(255, 255, 255, 0);}
     #schedule .schedule-heading #saturday-button.active, #schedule .schedule-heading #sunday-button.active {
-      text-decoration: underline; }
+      border-radius: 5vw;
+      border: .3vw solid rgb(255, 255, 255);
+      }
   #schedule .schedule-text {
     color: white;
     cursor: pointer; }
@@ -304,51 +308,44 @@ p, span, textarea, input, label, button, a {
   #schedule #saturday-schedule.active, #schedule #sunday-schedule.active {
     display: block; }
 
+
+#forest{
+  position: absolute;
+  top: 150.3vw;
+  left: 0vw;
+  width: 100vw;
+  z-index: 1; }
+
+#road14 {
+  position: absolute;
+  top: 113vw;
+  left: 10.2vw;
+  height: 25vw;
+  transform: rotate(180deg);
+  z-index: 1; }
+
+#road15{
+  position: absolute;
+  top: 136.4vw;
+  left: 23.8vw;
+  height: 14vw;
+  transform: rotate(180deg);
+  z-index: 1; }
+
+#road16{
+  position: absolute;
+  top: 136.7vw;
+  left: 10.1vw;
+  height: 13.7vw;
+  transform: rotate(00deg);
+  z-index: 1; }
+
 @keyframes logo-fall {
   0% {
-    top: -1000px; }
+    transform: translate3d(0, -60vw, 0); }
   100% {
-    top: 100px; } }
-
-@keyframes shake {
-  /* javascript to generate random offsets:
-   str=""; for (let i = 0; i <= 10; ++i) {
-      str += `${i * 10}% { top: ${Math.floor(Math.random() * 200 - 100)/((i+3))}px; left: ${Math.floor(Math.random() * 200 - 100)/((i+3))}px }\n`
-   }
-   */
-  0% {
-    top: 24px;
-    left: -19.333333333333332px; }
-  10% {
-    top: 6.5px;
-    left: 18.5px; }
-  20% {
-    top: 19.4px;
-    left: -3.2px; }
-  30% {
-    top: 4.666666666666667px;
-    left: -12.166666666666666px; }
-  40% {
-    top: 12.571428571428571px;
-    left: 11.714285714285714px; }
-  50% {
-    top: -0.125px;
-    left: -11.25px; }
-  60% {
-    top: -9.333333333333334px;
-    left: -0.3333333333333333px; }
-  70% {
-    top: -9.9px;
-    left: -7.5px; }
-  80% {
-    top: 3.3636363636363638px;
-    left: 5.181818181818182px; }
-  90% {
-    top: -4.166666666666667px;
-    left: -0.16666666666666666px; }
-  100% {
-    top: 3.6153846153846154px;
-    left: 5.846153846153846px; } }
+    transform: translate3d(0, 0px, 0);} 
+  }
 
 @keyframes fadeInDelayed {
   0% {
@@ -360,8 +357,9 @@ p, span, textarea, input, label, button, a {
 
 @keyframes bounce {
   0% {
-    top: 0; }
+    transform: translate3d(0, 0, 0); }
   50% {
-    top: 10px; }
+    transform: translate3d(0, -2vw, 0);}
   100% {
-    top: 0; } }
+    transform: translate3d(0, 0, 0);} 
+  }
