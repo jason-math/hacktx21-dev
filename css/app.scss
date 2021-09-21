@@ -76,7 +76,7 @@ p,span,textarea,input,label,button,a {
 .terrain {
    position: relative;
    top: 50vw;
-   height: 500vw;
+   height: 445vw;
    user-select: none;
    -webkit-user-drag: none;
 }
@@ -253,6 +253,15 @@ p,span,textarea,input,label,button,a {
    position: relative;
    width: 100%;
    top: 0vw;
+   user-select: none;
+   -webkit-user-drag: none;
+}
+#dragon {
+   position: absolute;
+   top: 15vw;
+   left: 60vw;
+   width: 15vw;
+   z-index: 3;
    user-select: none;
    -webkit-user-drag: none;
 }
@@ -630,6 +639,11 @@ p,span,textarea,input,label,button,a {
    z-index: 3;
    user-select: none;
    -webkit-user-drag: none;
+}
+#misc-text-section {
+   height: 0;
+   margin-bottom: 0;
+   padding-bottom: 0;
 }
 
 @keyframes logo-fall {
