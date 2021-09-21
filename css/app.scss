@@ -30,7 +30,6 @@ html {
 
 body {
    overflow-x: clip;
-   overflow-y: auto;
    position: relative;
    user-select: none;
    -webkit-user-drag: none;
@@ -578,10 +577,24 @@ p,span,textarea,input,label,button,a {
    user-select: none;
    -webkit-user-drag: none;
 }
+#who-attend-heading {
+   position: absolute;
+   top: 245vw;
+   left: 15vw;
+   width: 40vw;
+   z-index: 2;
+}
+#who-attend-text {
+   position: absolute;
+   top: 250vw;
+   left: 15vw;
+   width: 40vw;
+   z-index: 2;
+}
 #mountains {
    position: relative;
    width: 50%;
-   top: 100vw;
+   top: 130vw;
    z-index: 2;
    user-select: none;
    -webkit-user-drag: none;
@@ -589,14 +602,32 @@ p,span,textarea,input,label,button,a {
 #mountain-terrain {
    position: relative;
    width: 100%;
-   top: 70vw;
+   top: 100vw;
    user-select: none;
    -webkit-user-drag: none;
 }
 #cave {
    position: relative;
    width: 100%;
-   top: 45vw;
+   top: 75vw;
+   user-select: none;
+   -webkit-user-drag: none;
+}
+#bat2 {
+   position: absolute;
+   top: 375vw;
+   left: 10vw;
+   width: 15vw;
+   z-index: 3;
+   user-select: none;
+   -webkit-user-drag: none;
+}
+#bat1 {
+   position: absolute;
+   top: 410vw;
+   left: 75vw;
+   width: 20vw;
+   z-index: 3;
    user-select: none;
    -webkit-user-drag: none;
 }
