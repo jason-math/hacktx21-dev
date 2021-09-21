@@ -21,8 +21,8 @@ var turn4Percentage = 25.8
 var turn5Percentage = 39
 var turn6Percentage = 45
 var turn7Percentage = 49.5
-var turn8Percentage = 51.5
-var turn9Percentage = 55
+var turn8Percentage = 51.8
+var turn9Percentage = 57
 
 
 var topstring = top+"vw"
