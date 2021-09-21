@@ -30,6 +30,7 @@ html {
 
 body {
    overflow-x: clip;
+   overflow-y: auto;
    position: relative;
    user-select: none;
    -webkit-user-drag: none;
@@ -532,6 +533,51 @@ p,span,textarea,input,label,button,a {
    user-select: none;
    -webkit-user-drag: none;
 }
+#bird2 {
+   position: absolute;
+   top: 170vw;
+   left: 48vw;
+   width: 20vw;
+   z-index: 3;
+   user-select: none;
+   -webkit-user-drag: none;
+}
+#bird1 {
+   position: absolute;
+   top: 178vw;
+   left: 75vw;
+   width: 10vw;
+   z-index: 3;
+   user-select: none;
+   -webkit-user-drag: none;
+}
+#beaver {
+   position: absolute;
+   top: 222vw;
+   left: 57vw;
+   width: 15vw;
+   z-index: 3;
+   user-select: none;
+   -webkit-user-drag: none;
+}
+#bunny {
+   position: absolute;
+   top: 222vw;
+   left: 5vw;
+   width: 10vw;
+   z-index: 3;
+   user-select: none;
+   -webkit-user-drag: none;
+}
+#fox {
+   position: absolute;
+   top: 230vw;
+   left: 77vw;
+   width: 15vw;
+   z-index: 3;
+   user-select: none;
+   -webkit-user-drag: none;
+}
 #mountains {
    position: relative;
    width: 50%;
@@ -554,7 +600,6 @@ p,span,textarea,input,label,button,a {
    user-select: none;
    -webkit-user-drag: none;
 }
-
 
 @keyframes logo-fall {
    0% {
