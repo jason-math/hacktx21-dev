@@ -58,8 +58,8 @@ p, span, textarea, input, label, button, a {
   width: 65%;
   z-index: 2;
   animation-name: logo-fall;
-  animation-duration: 1s;
-  animation-timing-function: ease-out;
+  animation-duration: 1.5s;
+  animation-timing-function: cubic-bezier(0.4, 0, 0.8, 0);
   user-select: none;
   -webkit-user-drag: none; }
 
@@ -72,7 +72,7 @@ p, span, textarea, input, label, button, a {
   -webkit-user-drag: none; }
 
 .button-register {
-  animation: fadeInDelayed 1.5s ease-out;
+  animation: fadeInDelayed 3.8s ease-out;
   max-width: 100%;
   position: absolute;
   left: 0;
@@ -101,15 +101,14 @@ p, span, textarea, input, label, button, a {
   position: absolute;
   left: 0;
   right: 0;
-  top: 32vw;
+  top: 600px;
   max-width: 100%;
   text-align: center;
   font-size: 2em;
   text-shadow: 0 0 6px #0007;
   color: #fff;
-  animation: fadeInDelayed 1.8s ease-out; }
+  animation: fadeInDelayed 4.3s ease-out; }
   .button-more::after {
-    top: 2vw;
     font-size: 0.7em;
     content: "▼";
     display: block;
@@ -140,32 +139,40 @@ p, span, textarea, input, label, button, a {
   left: 60vw; }
 
 #road1 {
-    position: absolute;
-    top: -17.58vw;
-    left: 25.8vw;
-    width: 12.76vw;
-    z-index: 1;}
+  position: absolute;
+  top: -17.58vw;
+  left: 25.5vw;
+  width: 12.7vw;
+  z-index: 1;
+  user-select: none;
+  -webkit-user-drag: none; }
 
 #road2 {
   position: absolute;
   top: 5.75vw;
-  left: 25.8vw;
-  width: 12.76vw;
-  z-index: 1; }
+  left: 25.5vw;
+  width: 12.7vw;
+  z-index: 1;
+  user-select: none;
+  -webkit-user-drag: none; }
 
 #road3 {
   position: absolute;
   top: 5.75vw;
-  left: 38.4vw;
-  height: 12.76vw;
-  z-index: 1; }
+  left: 38vw;
+  height: 12.7vw;
+  z-index: 1;
+  user-select: none;
+  -webkit-user-drag: none; }
 
 #road4 {
   position: absolute;
   top: 5.75vw;
   left: 53.5vw;
   height: 12.7vw;
-  z-index: 1; }
+  z-index: 1;
+  user-select: none;
+  -webkit-user-drag: none; }
 
 #road5 {
   position: absolute;
@@ -173,7 +180,9 @@ p, span, textarea, input, label, button, a {
   left: 76vw;
   height: 12.7vw;
   transform: rotate(180deg);
-  z-index: 1; }
+  z-index: 1;
+  user-select: none;
+  -webkit-user-drag: none; }
 
 #what-heading {
   position: absolute;
@@ -251,7 +260,7 @@ p, span, textarea, input, label, button, a {
 #road11 {
   position: absolute;
   top: 48.8vw;
-  left: 19vw;
+  left: 18vw;
   height: 12.8vw;
   z-index: 1;
   user-select: none;
@@ -259,9 +268,9 @@ p, span, textarea, input, label, button, a {
 
 #road12 {
   position: absolute;
-  top: 48.9vw;
-  left: 9.7vw;
-  height: 12.5vw;
+  top: 48.8vw;
+  left: 6.1vw;
+  height: 12.8vw;
   z-index: 2;
   transform: rotate(90deg);
   user-select: none;
@@ -283,17 +292,19 @@ p, span, textarea, input, label, button, a {
 
 #road13 {
   position: absolute;
-  top: 61.3vw;
-  left: 9.7vw;
+  top: 59vw;
+  left: 6vw;
   width: 12.7vw;
-  z-index: 2;
+  z-index: 1;
   transform: rotate(180deg);
   user-select: none;
   -webkit-user-drag: none; }
 
 #lake {
   position: absolute;
+  width: 100%;
   top: 73vw;
+  left: -3.4vw;
   z-index: 2;
   width: 133%;
   user-select: none;
@@ -337,17 +348,12 @@ p, span, textarea, input, label, button, a {
   #schedule .schedule-heading {
     color: white; }
     #schedule .schedule-heading #saturday-button, #schedule .schedule-heading #sunday-button {
-      font-size: 4vw;
       cursor: pointer;
       display: inline-block;
-      width: 45%;
-      text-align: center;
-      border-radius: 5vw;
-      border: .3vw solid rgba(255, 255, 255, 0);}
+      width: 50%;
+      text-align: center; }
     #schedule .schedule-heading #saturday-button.active, #schedule .schedule-heading #sunday-button.active {
-      border-radius: 5vw;
-      border: .3vw solid rgb(255, 255, 255);
-      }
+      text-decoration: underline; }
   #schedule .schedule-text {
     max-height: 45vw;
     overflow-y: auto;
@@ -376,7 +382,7 @@ p, span, textarea, input, label, button, a {
 #road14 {
   position: absolute;
   top: 115vw;
-  left: 9.7vw;
+  left: 6vw;
   width: 12.7vw;
   z-index: 1;
   user-select: none;
@@ -385,7 +391,7 @@ p, span, textarea, input, label, button, a {
 #road15 {
   position: absolute;
   top: 132.5vw;
-  left: 9.7vw;
+  left: 6vw;
   width: 12.7vw;
   z-index: 1;
   user-select: none;
@@ -394,7 +400,7 @@ p, span, textarea, input, label, button, a {
 #road16 {
   position: absolute;
   top: 155vw;
-  left: 9.7vw;
+  left: 6vw;
   width: 12.8vw;
   z-index: 1;
   user-select: none;
@@ -403,7 +409,7 @@ p, span, textarea, input, label, button, a {
 #road17 {
   position: absolute;
   top: 155vw;
-  left: 22.3vw;
+  left: 18.5vw;
   height: 12.8vw;
   z-index: 1;
   user-select: none;
@@ -421,9 +427,10 @@ p, span, textarea, input, label, button, a {
 #road19 {
   position: absolute;
   top: 155vw;
-  left: 62.23vw;
-  height: 14vw;
-  z-index: 1;
+  left: 60.9vw;
+  width: 14.6vw;
+  height: 12.8vw;
+  z-index: 0;
   transform: rotate(180deg);
   user-select: none;
   -webkit-user-drag: none; }
@@ -432,26 +439,26 @@ p, span, textarea, input, label, button, a {
   position: relative;
   width: 100%;
   transform: scaleX(-1);
-  top: 98.45vw;
+  top: 99vw;
   z-index: 2;
   user-select: none;
   -webkit-user-drag: none; }
 
 @keyframes logo-fall {
   0% {
-    transform: translate3d(0, -60vw, 0); }
+    top: -1000px; }
   100% {
-    transform: translate3d(0, 0px, 0);} 
-  }  
+    top: 100px; } }
+
 @keyframes shake {
   /* javascript to generate random offsets:
-  str=""; for (let i = 0; i <= 10; ++i) {
-     str += `${i * 10}% { top: ${Math.floor(Math.random() * 200 - 100)/((i+3))}px; left: ${Math.floor(Math.random() * 200 - 100)/((i+3))}px }\n`
-  }
-  */
+   str=""; for (let i = 0; i <= 10; ++i) {
+      str += `${i * 10}% { top: ${Math.floor(Math.random() * 200 - 100)/((i+3))}px; left: ${Math.floor(Math.random() * 200 - 100)/((i+3))}px }\n`
+   }
+   */
   0% {
     top: 24px;
-    left: -19.3333333333px; }
+    left: -19.333333333333332px; }
   10% {
     top: 6.5px;
     left: 18.5px; }
@@ -460,28 +467,29 @@ p, span, textarea, input, label, button, a {
     left: -3.2px; }
   30% {
     top: 4.666666666666667px;
-    left: -12.1666666667px; }
+    left: -12.166666666666666px; }
   40% {
     top: 12.571428571428571px;
-    left: 11.7142857143px; }
+    left: 11.714285714285714px; }
   50% {
     top: -0.125px;
     left: -11.25px; }
   60% {
     top: -9.333333333333334px;
-    left: -0.3333333333px; }
+    left: -0.3333333333333333px; }
   70% {
     top: -9.9px;
     left: -7.5px; }
   80% {
     top: 3.3636363636363638px;
-    left: 5.1818181818px; }
+    left: 5.181818181818182px; }
   90% {
     top: -4.166666666666667px;
-    left: -0.1666666667px; }
+    left: -0.16666666666666666px; }
   100% {
     top: 3.6153846153846154px;
-    left: 5.8461538462px; } }
+    left: 5.846153846153846px; } }
+
 @keyframes fadeInDelayed {
   0% {
     opacity: 0; }
@@ -489,11 +497,11 @@ p, span, textarea, input, label, button, a {
     opacity: 0; }
   100% {
     opacity: 1; } }
+
 @keyframes bounce {
   0% {
-    transform: translate3d(0, 0, 0); }
+    top: 0; }
   50% {
-    transform: translate3d(0, -2vw, 0);}
+    top: 10px; }
   100% {
-    transform: translate3d(0, 0, 0);} 
-  }
+    top: 0; } }
