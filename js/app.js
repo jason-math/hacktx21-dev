@@ -7,6 +7,15 @@ const volcano = bodymovin.loadAnimation({
     name: "Volcano", // Name for future reference. Optional.
 });
 
+const dragon = bodymovin.loadAnimation({
+    container: document.getElementById('dragon'), // Required
+    path: 'images/dragon.json', // Required
+    renderer: 'svg', // Required
+    loop: true, // Optional
+    autoplay: true, // Optional
+    name: "Ducks2", // Name for future reference. Optional.
+});
+
 const ducks1 = bodymovin.loadAnimation({
     container: document.getElementById('ducks1'), // Required
     path: 'images/ducks.json', // Required

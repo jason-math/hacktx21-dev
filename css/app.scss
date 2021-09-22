@@ -146,14 +146,14 @@ p,span,textarea,input,label,button,a {
    position: absolute;
    left: 0;
    right: 0;
-   top: 600px;
+   top: 32vw;
    max-width: 100%;
    text-align: center;
    font-size: 2em;
    text-shadow: 0 0 6px #0007;
    color: #fff;
 
-   animation: fadeInDelayed 4.3s ease-out;
+   animation: fadeInDelayed 1.8s ease-out;
 
    &::after {
       font-size: 0.7em;
@@ -193,7 +193,7 @@ p,span,textarea,input,label,button,a {
 #road1 {
    position: absolute;
    top: -17.58vw;
-   left: 25.9vw;
+   left: 25.5vw;
    width: 12.7vw;
    z-index: 1;
    user-select: none;
@@ -202,7 +202,7 @@ p,span,textarea,input,label,button,a {
 #road2 {
    position: absolute;
    top: 5.75vw;
-   left: 25.9vw;
+   left: 25.5vw;
    width: 12.7vw;
    z-index: 1;
    user-select: none;
@@ -211,8 +211,8 @@ p,span,textarea,input,label,button,a {
 #road3 {
    position: absolute;
    top: 5.75vw;
-   left: 38vw;
-   height: 12.7vw;
+   left: 38.4vw;
+   height: 12.76vw;
    z-index: 1;
    user-select: none;
    -webkit-user-drag: none;
@@ -322,7 +322,7 @@ p,span,textarea,input,label,button,a {
 #road11 {
    position: absolute;
    top: 48.8vw;
-   left: 18vw;
+   left: 19vw;
    height: 12.8vw;
    z-index: 1;
    user-select: none;
@@ -330,9 +330,9 @@ p,span,textarea,input,label,button,a {
 }
 #road12 {
    position: absolute;
-   top: 48.8vw;
-   left: 6.1vw;
-   height: 12.8vw;
+   top: 48.89vw;
+   left: 6.3vw;
+   height: 12.5vw;
    z-index: 2;
    transform: rotate(90deg);
    user-select: none;
@@ -354,17 +354,16 @@ p,span,textarea,input,label,button,a {
 }
 #road13 {
    position: absolute;
-   top: 59vw;
-   left: 6vw;
+   top: 61.3vw;
+   left: 6.3vw;
    width: 12.7vw;
-   z-index: 1;
+   z-index: 2;
    transform: rotate(180deg);
    user-select: none;
    -webkit-user-drag: none;
 }
 #lake {
    position: absolute;
-   width: 100%;
    top: 73vw;
    left: -3.4vw;
    z-index: 2;
@@ -399,7 +398,6 @@ p,span,textarea,input,label,button,a {
    top: 85vw;
    width: 40vw;
    z-index: 100;
-   
 
    ::-webkit-scrollbar {
       width: 20px;
@@ -424,19 +422,23 @@ p,span,textarea,input,label,button,a {
       color: white;
 
       #saturday-button, #sunday-button {
+         font-size: 4vw;
          cursor: pointer;
          display: inline-block;
-         width: 50%;
+         width: 45%;
          text-align: center;
+         border-radius: 5vw;
+         border: .3vw solid rgba(255, 255, 255, 0);
       }
 
       #saturday-button.active, #sunday-button.active {
-         text-decoration: underline;
+         border-radius: 5vw;
+         border: .3vw solid rgba(255, 255, 255, 100);
       }
    }
 
    .schedule-text {
-      max-height: 45vw;
+      max-height: 40vw;
       overflow-y: auto;
       color: white;
       cursor: pointer;
@@ -478,7 +480,7 @@ p,span,textarea,input,label,button,a {
 #road14 {
    position: absolute;
    top: 115vw;
-   left: 6vw;
+   left: 6.3vw;
    width: 12.7vw;
    z-index: 1;
    user-select: none;
@@ -487,7 +489,7 @@ p,span,textarea,input,label,button,a {
 #road15 {
    position: absolute;
    top: 132.5vw;
-   left: 6vw;
+   left: 6.3vw;
    width: 12.7vw;
    z-index: 1;
    user-select: none;
@@ -497,7 +499,7 @@ p,span,textarea,input,label,button,a {
 #road16 {
    position: absolute;
    top: 155vw;
-   left: 6vw;
+   left: 6.3vw;
    width: 12.8vw;
    z-index: 1;
    user-select: none;
@@ -506,7 +508,7 @@ p,span,textarea,input,label,button,a {
 #road17 {
    position: absolute;
    top: 155vw;
-   left: 18.5vw;
+   left: 19vw;
    height: 12.8vw;
    z-index: 1;
    user-select: none;
@@ -521,10 +523,15 @@ p,span,textarea,input,label,button,a {
    user-select: none;
    -webkit-user-drag: none;
 }
+#spriteWalk {
+   width: 0;
+   z-index: 3;
+}
+
 #road19 {
    position: absolute;
    top: 155vw;
-   left: 61.7vw;
+   left: 60.9vw;
    width: 14.6vw;
    height: 12.8vw;
    z-index: 0;
@@ -536,7 +543,7 @@ p,span,textarea,input,label,button,a {
    position: relative;
    width: 100%;
    transform: scaleX(-1);
-   top: 98.1vw;
+   top: 98.25vw;
    z-index: 2;
    user-select: none;
    -webkit-user-drag: none;
@@ -546,7 +553,7 @@ p,span,textarea,input,label,button,a {
    top: 170vw;
    left: 48vw;
    width: 20vw;
-   z-index: 3;
+   z-index: 100;
    user-select: none;
    -webkit-user-drag: none;
 }
@@ -555,7 +562,7 @@ p,span,textarea,input,label,button,a {
    top: 178vw;
    left: 75vw;
    width: 10vw;
-   z-index: 3;
+   z-index: 4;
    user-select: none;
    -webkit-user-drag: none;
 }
@@ -615,6 +622,24 @@ p,span,textarea,input,label,button,a {
    user-select: none;
    -webkit-user-drag: none;
 }
+#devrev {
+   position: absolute;
+   z-index: 4;
+   width: 11vw;
+   top: 379vw;
+   left: 68vw;
+   user-select: none;
+   -webkit-user-drag: none;
+}
+#linode {
+   position: absolute;
+   z-index: 4;
+   width: 20vw;
+   top: 375vw;
+   left: 15vw;
+   user-select: none;
+   -webkit-user-drag: none;
+}
 #cave {
    position: relative;
    width: 100%;
@@ -633,7 +658,7 @@ p,span,textarea,input,label,button,a {
 }
 #bat1 {
    position: absolute;
-   top: 410vw;
+   top: 430vw;
    left: 75vw;
    width: 20vw;
    z-index: 3;
@@ -646,33 +671,87 @@ p,span,textarea,input,label,button,a {
    padding-bottom: 0;
 }
 
+#sponsors-heading{
+     position: absolute;
+     top: 375vw;
+     font-size: 5vw;
+     z-index: 100;
+     width: 100vw;
+     color: white;
+     text-align: center;
+     font-family: "Museo", sans-serif;
+   
+   }
+   
+   #sponsors-text{
+     position: absolute;
+     font-size: 3vw;
+     z-index: 100;
+     width: 100vw;
+     color: white;
+     text-align: center;
+     margin-top: -85vw;
+     font-family: "Museo", sans-serif;
+     word-spacing: 10vw;
+   }
+   
+   #FAQ-heading{
+     position: absolute;
+     font-size: 10vw;
+     z-index: 100;
+     width: 100vw;
+     color: white;
+     text-align: center;
+     margin-top: -20vw;
+     font-family: "Museo", sans-serif;
+   
+   }
+   .two-column {
+     margin-top: 2vw;
+     position: absolute;
+     z-index: 100;
+     display: flex;
+     justify-content: space-evenly;
+     width: 100%;
+   }
+   
+   .left-column-mobile {
+     color: white;
+      margin-left: 7%;
+      margin-right: 4%;
+      max-width: 40%;
+      justify-content: center;
+      display: inline;
+      line-height: 1.25;
+      margin-bottom: 5%;
+   }
+   
+   .right-column-mobile {
+     color: white;
+      margin-left: 4%;
+      margin-right: 7%;
+      max-width: 40%;
+      justify-content: center;
+      display: inline;
+      line-height: 1.25;
+      margin-bottom: 5%;
+   }
+   .question{
+     color: rgb(193, 231, 127);
+     font-weight: bold;
+     margin-bottom: -1vw;
+     font-size: 2vw;
+   }
+   
+
 @keyframes logo-fall {
    0% {
-      top: -1000px;
+      transform: translate3d(0, -60vw, 0);
    }
 
    100% {
-      top: 100px;
+      transform: translate3d(0, 0px, 0);
    }
-}
-
-@keyframes shake {
-   /* javascript to generate random offsets:
-   str=""; for (let i = 0; i <= 10; ++i) {
-      str += `${i * 10}% { top: ${Math.floor(Math.random() * 200 - 100)/((i+3))}px; left: ${Math.floor(Math.random() * 200 - 100)/((i+3))}px }\n`
-   }
-   */
-   0% { top: 24px; left: -19.333333333333332px }
-   10% { top: 6.5px; left: 18.5px }
-   20% { top: 19.4px; left: -3.2px }
-   30% { top: 4.666666666666667px; left: -12.166666666666666px }
-   40% { top: 12.571428571428571px; left: 11.714285714285714px }
-   50% { top: -0.125px; left: -11.25px }
-   60% { top: -9.333333333333334px; left: -0.3333333333333333px }
-   70% { top: -9.9px; left: -7.5px }
-   80% { top: 3.3636363636363638px; left: 5.181818181818182px }
-   90% { top: -4.166666666666667px; left: -0.16666666666666666px }
-   100% { top: 3.6153846153846154px; left: 5.846153846153846px }
 }
 
 @keyframes fadeInDelayed {
@@ -691,14 +770,14 @@ p,span,textarea,input,label,button,a {
 
 @keyframes bounce {
    0% {
-      top: 0;
+      transform: translate3d(0,0,0);
    }
 
    50% {
-      top: 10px;
+      transform: translate3d(0, -1vw, 0);
    }
 
    100% {
-      top: 0;
+      transform: translate3d(0,0,0);
    }
 }
