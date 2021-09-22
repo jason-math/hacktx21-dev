@@ -1,13 +1,28 @@
 const sprite = document.getElementById("spriteWalk")
 
 var topConst = 45
-var leftConst = 29.5
+var leftConst = 30
+var midConst = -30
+var rightConst = 79
+var bridgeConst = -58
+var lakeConst = 10
+var forestConst = -88
+var rightForestConst = 65
+var topRockConst = -98
 
 var topS = 45
 var leftS = 27.5
+var rightS = 12.5
 
-var turn1Pecentage = 15
-var turn2Pecentage = 25
+var turn1Percentage = 10
+var turn2Percentage = 15.5
+var turn3Percentage = 21
+var turn4Percentage = 25.8
+var turn5Percentage = 39
+var turn6Percentage = 45
+var turn7Percentage = 49.5
+var turn8Percentage = 51.8
+var turn9Percentage = 57
 
 
 var topstring = top+"vw"
@@ -17,27 +32,63 @@ sprite.style.position = "absolute"
 sprite.style.zIndex = "10"
 sprite.style.top = topS + "vw"
 sprite.style.left = leftS + "vw"
+sprite.style.right = rightS + "vw"
 
 var scrollpercentOriginal = 0;
 
 window.addEventListener('scroll', () => {
     scrollPercent = getScrollPercent()
-    var scollDiff = scrollPercent - scrollpercentOriginal
+    var scrollDiff = scrollPercent - scrollpercentOriginal
 
-    console.log(scollDiff)
+    console.log(scrollPercent)
 
     scrollpercentOriginal=scrollPercent
 
-    if(scrollPercent < turn1Pecentage){
-        topS = 2.5*getScrollPercent() + topConst
+    if(scrollPercent < turn1Percentage){
+        topS = 3.5 * getScrollPercent() + topConst
         sprite.src = "images/spriteFront.png"
         sprite.style.left = "27.5vw"
         sprite.style.top = topS + "vw"
     }
-    if(scrollPercent > turn1Pecentage && scrollPercent < turn2Pecentage){
-        leftS = 4*(getScrollPercent()-turn1Pecentage)+leftConst
+    if(scrollPercent > turn1Percentage && scrollPercent < turn2Percentage){
+        leftS = 9 * (getScrollPercent() - turn1Percentage) + leftConst
         sprite.src = "images/spriteRight.png"
         sprite.style.left = leftS + "vw"
+    }
+    if(scrollPercent > turn2Percentage && scrollPercent < turn3Percentage){
+        topS = 8 * getScrollPercent() - turn2Percentage + midConst
+        sprite.src = "images/spriteFront.png"
+        sprite.style.top = topS + "vw"
+    }
+    if(scrollPercent > turn3Percentage && scrollPercent < turn4Percentage){
+        leftS = -15 * (getScrollPercent() - turn3Percentage) + rightConst
+        sprite.src = "images/spriteLeft.png"
+        sprite.style.left = leftS + "vw"
+    }
+    if(scrollPercent > turn4Percentage && scrollPercent < turn5Percentage){
+        topS = 8 * getScrollPercent() - turn4Percentage + bridgeConst
+        sprite.src = "images/spriteFront.png"
+        sprite.style.top = topS + "vw"
+    }
+    if(scrollPercent > turn5Percentage && scrollPercent < turn6Percentage){
+        leftS = 9 * (getScrollPercent() - turn5Percentage) + lakeConst
+        sprite.src = "images/spriteRight.png"
+        sprite.style.left = leftS + "vw"
+    }
+    if(scrollPercent > turn6Percentage && scrollPercent < turn7Percentage){
+        topS = 8 * getScrollPercent() - turn6Percentage + forestConst
+        sprite.src = "images/spriteFront.png"
+        sprite.style.top = topS + "vw"
+    }
+    if(scrollPercent > turn7Percentage && scrollPercent < turn8Percentage){
+        leftS = -15 * (getScrollPercent() - turn7Percentage) + rightForestConst
+        sprite.src = "images/spriteLeft.png"
+        sprite.style.left = leftS + "vw"
+    }
+    if(scrollPercent > turn8Percentage && scrollPercent < turn9Percentage){
+        topS = 8 * getScrollPercent() - turn8Percentage + topRockConst
+        sprite.src = "images/spriteFront.png"
+        sprite.style.top = topS + "vw"
     }
   
 })
